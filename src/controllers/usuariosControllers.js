@@ -117,3 +117,7 @@ export const login = (req, res) => {
           }
     })
 }
+
+export const verifyTokenJWT = (req, res) => {
+    res.send("Entrou na area protegida!")
+}

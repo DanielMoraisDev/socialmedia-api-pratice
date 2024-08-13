@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken"
+import "dotenv/config"
 
 const createUserToken = async (usuario, req, res) => {
     
@@ -6,7 +7,7 @@ const createUserToken = async (usuario, req, res) => {
         nome: usuario.username,
         id: usuario.usuario_id
     },
-        process.env.JWT_PASSWORD
+        process.env.JWT_SECRET
     )
 
     res.json({
